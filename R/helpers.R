@@ -57,12 +57,12 @@ load_tiger <- function(url,
       if (class == "sp") {
 
         obj <- readOGR(dsn = cache_dir, layer = shape, encoding = "UTF-8",
-                       verbose = FALSE, stringsAsFactors = FALSE)
+                       verbose = FALSE, stringsAsFactors = TRUE)
 
       } else if (class == "sf") {
 
         obj <- st_read(dsn = cache_dir, layer = shape,
-                       quiet = TRUE, stringsAsFactors = FALSE)
+                       quiet = TRUE, stringsAsFactors = TRUE)
 
       }
 
